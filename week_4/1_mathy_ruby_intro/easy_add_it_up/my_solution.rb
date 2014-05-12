@@ -53,9 +53,17 @@ def sentence_maker(array_of_strings)
 	# For each member of array_of_strings, add to the sentence variable
 	for num in 1..array_of_strings.length
 		# if the member of the array is the first member of array_of_strings, capitalize it
+		if num == 1
+			sentence += array_of_strings[1].upCase
 		# if not, then don't capitalize it
+		else 
+			sentence += array_of_strings[num]
+		end
 	# End the sentence variable with a period
+	sentence += "."
 	# Return the sentence variable
+	return sentence
+end
 
 
 
