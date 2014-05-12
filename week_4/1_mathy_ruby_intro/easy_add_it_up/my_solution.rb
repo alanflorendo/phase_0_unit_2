@@ -26,6 +26,7 @@
 	# Declare new sentence variable and set to ""
 	# For each member of array_of_strings, add to the sentence variable
 		# if the member of the array is the first member of array_of_strings, capitalize it
+		# if not, then don't capitalize it
 	# End the sentence variable with a period
 	# Return the sentence variable
 
@@ -33,6 +34,28 @@
 
 
 # 2. Initial Solution
+# Create total method with single argument: array_to_total
+def total(array_to_total)
+	# Declare new sum variable and set to zero
+	sum = 0
+	# For each member of array_to_total, add to the sum variable
+	array_to_total.each do |x|
+		sum += x
+	end
+	# Return the sum variable
+	return sum
+end
+
+# Create sentence_maker method with single argument: array_of_strings
+def sentence_maker(array_of_strings)
+	# Declare new sentence variable and set to ""
+	sentence = ""
+	# For each member of array_of_strings, add to the sentence variable
+	for num in 1..array_of_strings.length
+		# if the member of the array is the first member of array_of_strings, capitalize it
+		# if not, then don't capitalize it
+	# End the sentence variable with a period
+	# Return the sentence variable
 
 
 
