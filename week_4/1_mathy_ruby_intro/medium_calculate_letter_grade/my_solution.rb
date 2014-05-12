@@ -55,7 +55,24 @@ end
 
 
 # 3. Refactored Solution
+=begin
+I decided not to refactor.  The solution is clean, readable, and effective.
 
+I considered changing the format of the case statement to an if/else series, but I think the case statement 
+reads cleaner.  I also considered accounting for possibilities with negative grades or grades over 100.  
+These could be mistakes, or there could be reasons for having such grades, so I decided that this issue
+was beyond the scope of the exercise.
+=end
 
 
 # 4. Reflection 
+=begin
+
+This solution worked out well for me.  It worked on the first time and boosted my confidence after the last
+"easy" problem, where I just had to keep reediting my code and pseudocode to correct for small mistakes.
+This problem made me realize that I need to focus on the actual code as I write the pseudocode.  That is, 
+I don't inlcude the code as I pseudocode, but I do think precisely about what the coding options are for
+the particular line of pseudocode.  What are the alternatives, and how might I do this?  Later, when I am 
+converting the pseudocode into code, those prior reflections are very helpful.
+
+=end
