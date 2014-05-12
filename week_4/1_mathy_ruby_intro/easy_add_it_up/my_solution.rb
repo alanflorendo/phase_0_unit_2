@@ -47,7 +47,7 @@ def total(array_to_total)
 	return sum
 end
 
-
+=begin
 # Create sentence_maker method with single argument: array_of_strings
 def sentence_maker(array_of_strings)
 	# Declare new sentence variable and set to ""
@@ -71,15 +71,31 @@ def sentence_maker(array_of_strings)
 	# Return the sentence variable
 	return sentence
 end
-
+=end
 
 
 # 3. Refactored Solution
 # Leave total method as is; it is clean, readable, and functional.
 
+# Create sentence_maker method with single argument: array_of_strings
+def sentence_maker(array_of_strings)
+	# Declare new sentence variable and set to ""
+	sentence = ""
+	# Capitalize first word in array
+	array_of_strings[0].to_s.capitalize!
+	# For each member of array_of_strings, add to the sentence variable (converting to string)
+	for num in 0..(array_of_strings.length - 1)
+			sentence += array_of_strings[num].to_s
+		# unless the member of the array is the last member of array_of_strings_, add a space after the word
+		unless num == (array_of_strings.length - 1)
+			sentence += " "
+		end
+	end
+	# End the sentence variable with a period
+	sentence += "."
+	# Return the sentence variable
+	return sentence
+end
 
-
-puts sentence_maker(["all", "my", "socks", "are", "dirty"])
-puts sentence_maker(["alaska", "has", "over", 586, "thousand", "miles"])
 
 # 4. Reflection 
