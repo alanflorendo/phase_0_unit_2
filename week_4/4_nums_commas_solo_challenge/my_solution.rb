@@ -135,8 +135,45 @@ end
 # 1. Pseudocode
 
 # What is the input?
+# The input is a number, formatted as a number (float or integer)
 # What is the output? (i.e. What should the code return?)
+# The method should return the same number as a string, formatted with commas
 # What are the steps needed to solve the problem?
+
+
+# Create a function to format a number with commas
+		# Remove and track any decimal portion
+			# Declare a new variable (has_decimal) and set equal to false
+			# Declare a new variable (dec_string) and set equal to the portion of the string after the decimal
+
+		# Convert non-decimal portion of number (string) to number (integer)
+
+		# Remove and track sign of number
+			# Declare a new variable (is_neg) and set to false
+			# If base_num < 0
+				# set is_neg equal to true and
+				# remove the negative sign by multiplying by -1
+
+		# Declare new variable (num_digits) equal to the number of digits (log base ten of the number, rounded down)
+
+		# Declare a new variable (num_text) and set equal to an empty string
+
+		# For each digit
+			# Create a new variable (digit), equal to the base_number MINUS the base_number-rounded down to the ten's place
+			# Insert the digit in front of the string of digits
+			# If BOTH the iteration is evenly divisble by 3 AND we are not at the final digit
+				# Then insert a comma in front of the string of digits
+			# Before moving on to the next loop, cut off the one's place (do this by
+			# => subtracting the digit and then dividing the remaining number by 10)
+
+		# If original number was negative, append a minus sign to the front of the string number
+
+		# If original number had a decimal portion, append it to the end of the string number
+
+	# Return num_text
+
+
+
 
 
 # 2. Initial Solution
