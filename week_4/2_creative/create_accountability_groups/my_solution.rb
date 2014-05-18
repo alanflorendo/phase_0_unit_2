@@ -299,4 +299,12 @@ puts "#{hash_value_min(new_ag_bracket(students)) <= 6}"
 
 # 5. Reflection 
 
-
+=begin
+I found the driver code particularly challenging here, as we seemed to jump from reading simple driver code 
+(e.g., test that the mean of [4,5,6] is 5) to this much more complext assignment.  Here, there is not going
+to be a correct set of accountability groups, just an effectively infinite set of solutions with correct 
+characteristics.  I had a hard time identifying what those characteristics would be.  I chose just the minimum
+and maximum sizes for a given group of 26 students.  I had wanted to test for the variety of students a given
+student would work with based on the accountability groups, and I developed some test code, but I couldn't
+get it to work.  Someday, maybe.
+=end
