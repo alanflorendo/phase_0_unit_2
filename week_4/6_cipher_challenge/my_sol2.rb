@@ -2,7 +2,6 @@
 def north_korean_cipher(coded_message) 
   input = coded_message.downcase.split("") 
   decoded_sentence = []
-  
   input.each do |x| 
       if (97..100).to_a.include?(x.ord)
           decoded_char = (119 + (x.ord - 97)).chr
