@@ -109,3 +109,13 @@ p north_korean_cipher("ribx^wxst:$wsyxl%osvie,$xlir$neter,#xlir%xli%asvph!") == 
 p north_korean_cipher("ger^wsqifshc*nywx^kix^qi&10000*fekw@sj$gssp%vergl@hsvmxsw?") == "can somebody just get me 100 bags of cool ranch doritos?"
 
 # Reflection
+=begin
+
+We did well by focusing on the driver code and using that to interpret what our code needed to accomplish.  
+We also did kept a decent amount of the intial code, trying not to rewrite everything, but instead trying to 
+find what was useable (and well-written) in the initial code.  As a pair, we were very good at explaining to each
+other the various code blocks we did not initially understand.  We also paid a lot of attention while the other 
+was typing, catching syntax errors and focusing on what could be accomplished more simply.  In the end, 
+we were pleasantly surprised to find that our code worked the first time.
+
+=end
