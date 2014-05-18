@@ -10,7 +10,7 @@
 # If you have difficulty, go into IRB and play with the methods.
 
 
-
+=begin
 def north_korean_cipher(coded_message) 
   input = coded_message.downcase.split("") # Check out this method in IRB to see how it works! Also refer to the ruby docs.
   decoded_sentence = []
@@ -70,8 +70,30 @@ def north_korean_cipher(coded_message)
   end  
   return decoded_sentence # What is this returning? - Final decoded_sentence string      
 end
+=end
 
 # Your Refactored Solution
+def north_korean_cipher(coded_message) 
+  input = coded_message.downcase.split("") 
+  decoded_sentence = []
+  input.each do |x| 
+    if (97..100).to_a.include?(x.ord)
+      decoded_char = (119 + (x.ord - 97)).chr
+    elsif (101..122).to_a.include?(x.ord)
+      decoded_char = (x.ord - 4).chr 
+    elsif (["@","#","$","%","^","&","*"]).include?(x) 
+      decoded_char = " "
+    else
+      decoded_char = x
+    end 
+    decoded_sentence << decoded_char
+  end
+  decoded_sentence = decoded_sentence.join("") 
+  if decoded_sentence.match(/\d+/) 
+    decoded_sentence.gsub!(/\d+/) { |num| num.to_i / 100 } 
+  end  
+  return decoded_sentence 
+end
 
 
 
