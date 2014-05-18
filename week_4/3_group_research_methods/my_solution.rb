@@ -35,17 +35,33 @@ end
 
 # Person 3
 def my_array_sorting_method(source)
-  # Your code here!
+  # Convert each element in the array to a string, for comparison/sorting purposes
+  for index in 0...source.length
+		source[index] = source[index].to_s
+	end
+
+	sorted_array = source.sort_by do |element|
+		element
+	end
+
+	return sorted_array
 end
 
 def my_hash_sorting_method(source)
   # Your code here!
+	sorted_hash = source.sort_by do |key, value|
+		value
+	end
+
+	return sorted_hash
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
+# The Ruby sort_by method lets you sort within your object, whether it is an array or a hash.  
+# For an array, the syntax is quite basic:  
+#     sorted_array = array_to_sort.sort_by { |element| element }
+# And for the hash, just a tad more involved:
+#     sorted_hash = source.sort_by { |key, value| value }
 
 
 # Person 4
@@ -78,8 +94,15 @@ p my_array_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "on
 p my_hash_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
-# 
-# 
-# 
-# 
-# 
+=begin
+My experience with methods is tempered by the fact that I misread the assignment.  Or rather, I read the 
+directions to make the assignment much more complicated than it needed to be.  Instead of simply using 
+Ruby’s sort_by method, I used Ruby’s .length method to program a sorting technique from scratch.  (Using 
+that mistaken approach, I really learned the value of pseudocode and properly labeling variables.  At 
+least for now, I believe erring on the side of lengthier content focuses the thought process.) 
+
+As for exploring Ruby methods, I find myself somewhat more comfortable with the Ruby Docs than I was 
+before I started the assignment.  If I suspect what the method does, then I can interpret the Ruby Docs 
+pretty well; otherwise, it’s more of an issue.  And in either event, I find simply googling the method 
+(or the problem which I hope to solve via method) tends to inform me better.
+=end
