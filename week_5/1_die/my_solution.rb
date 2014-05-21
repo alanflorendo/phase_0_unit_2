@@ -50,7 +50,7 @@ end
 =end
 
 
-# 4. Refactored Solution
+# 4. Refactored Solution ==> Added error message to INITIALIZE
 
 class Die
   def initialize(sides)
