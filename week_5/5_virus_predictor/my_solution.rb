@@ -55,6 +55,9 @@ class VirusPredictor
 
 =begin
   private  #what is this?  what happens if it were cut and pasted above the virus_effects method
+  # private makes the methods below it unavailable to be called on a specific object.  The 
+  virus_effects method can call on these private methods, but they cannot be called outside of
+  this object:  Thus, I cannot call "alabama.predicted_deaths".
 
   # Create a predicted_deaths method to print, for the state-VirusPredictor called upon, a string
   # indicating the predicted number of deaths for the given state.
