@@ -120,7 +120,10 @@ puts valid_card.check_card == true
 invalid_card = CreditCard.new(4408041234567892)
 puts invalid_card.check_card == false
 
+puts valid_card.method(:initialize).arity == 1
+
 # error_card = CreditCard.new(1234) # => raises ArgumentError
+
 
 
 # 5. Reflection 
