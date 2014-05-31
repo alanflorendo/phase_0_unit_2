@@ -19,7 +19,7 @@ To do this, take a look at the methods you've created.  How can they be integrat
 ## Release 1: Implement your methods
 One method at a time, create a test to access your new `boggle_board` object. The first method should be `#create_word`. (Don't get thrown off with the `#method_name` syntax, using `#` before a method name is a ruby convention.) Write out a test with it's expectation in a comment, and then create the method in the `BoggleBoard` class. Try these coordinates: (1,2), (1,1), (2,1), (3,2).
 
-Then, write methods for `#get_row` and `#get_col`.  Can you interact with the boggle_board object and get the values you expect?  Now print out all the rows and columns of the board as strings. You should end up with 8 four letter words. Are there any real words shown? Add your total output as a comment in your gist.
+Then, write methods for `#get_row` and `#get_col`.  Can you interact with the boggle_board object and get the values you expect?  Now print out all the rows and columns of the board as strings. You should end up with 8 four letter words. Are there any real words shown? Add your total output as a comment in your my_solution.rb file.
 
 ## Release 2: Access the coordinates
 Now write some driver code to access an individual coordinate in your `boggle_board` object. Make this as simple as possible. Can you access the "k" character at row 3 column 2?
@@ -27,7 +27,7 @@ Now write some driver code to access an individual coordinate in your `boggle_bo
 ## Release 3: [Refactor](https://github.com/Devbootcamp/phase_0_handbook/blob/master/coding_references/refactoring.md)
 
 ## Release 4: [Reflect](https://github.com/Devbootcamp/phase_0_handbook/blob/master/coding_references/reflection_guidelines.md)
-You just made a transition from procedural programming to object-oriented programming!  How is the implementation different?  What are the benefits to using the Object Oriented approach (even if it is a bit more code?) Make sure to include your reflection in your gist.
+You just made a transition from procedural programming to object-oriented programming!  How is the implementation different?  What are the benefits to using the Object Oriented approach (even if it is a bit more code?) 
 
 ## Release 5: Push your solution to Github
 

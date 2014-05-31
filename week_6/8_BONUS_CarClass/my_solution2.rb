@@ -4,7 +4,7 @@
 # I worked on this challenge [by myself, with: ].
 
 
-# 2. Pseudocode
+# 2. Pseudocode 
 =begin
     * CREATE a car class
       * CREATE initialize method with color and model as attributes
@@ -32,6 +32,16 @@
          @actions << "car points to #{@orientation}"
        end
        
+       def turn_right
+       	@orientation += 90
+       	set_orientation(@orientation)
+       end
+
+       def turn_left
+       	@orientation -= 90
+       	set_orientation(@orientation)
+       end
+
        def set_speed(speed)
          @speed = speed
          @actions << "car moves at #{@speed}"
@@ -109,7 +119,7 @@
   p my_car.speed == 25
   
   my_car.set_speed(0)
-  my_car.set_orientation(90)
+  my_car.turn_right
   my_car.set_speed(35)
   my_car.drive(1.5)
   
@@ -119,7 +129,7 @@
   my_car.set_speed(15)
   my_car.drive(0.25)
   my_car.set_speed(0)
-  my_car.set_orientation(0)
+  my_car.turn_left
   my_car.set_speed(35)
   my_car.drive(1.4)
   my_car.set_speed(0)

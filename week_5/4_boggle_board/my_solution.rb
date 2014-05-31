@@ -155,6 +155,7 @@ be a very simple way to approach a problem.
 
 
 
+<<<<<<< HEAD
 #-------------------------------------------------------------------------------
 
 # Part 3: Now write a method that takes a column number and returns all the elements in the column.
@@ -216,3 +217,5 @@ I don't think any of the sections of this challenge were tedious at all because 
 into such simple methods.  Let this be a lesson to me (and others) to break the project into simpler pieces
 even if DBC hasn't done it for me.
 =end
+=======
+>>>>>>> FETCH_HEAD
