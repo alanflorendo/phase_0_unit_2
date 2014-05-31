@@ -31,17 +31,17 @@ end
 # Refactored Solution
 
 class CreditCard
-  def initialize(credit)
-    if credit.include?(" ")
-      @credit = credit.delete(" ")
+  def initialize(cc_num)
+    if cc_num.include?(" ")
+      @cc_num = cc_num.delete(" ")
     else
-      @credit = credit
+      @cc_num = cc_num
     end
-    raise ArgumentError.new("Invalid Card Length") if @credit.length != 16
+    raise ArgumentError.new("Invalid Card Length") if @cc_num.length != 16
   end
     
   def double
-       @double = @credit.split("").map.with_index { |n,i| i%2==0 ? n.to_i * 2 : n.to_i }
+       @double = @cc_num.split("").map.with_index { |n,i| i%2==0 ? n.to_i * 2 : n.to_i }
   end
   
   def sum_elements 
