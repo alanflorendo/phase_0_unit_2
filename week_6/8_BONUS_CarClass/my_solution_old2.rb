@@ -139,44 +139,48 @@
 
 # 4. Refactored Solution
 
-=begin
-set a method to input the speed limit--> have something say whether you should accel or decel
-replace drive method with total_dist --> no need to combine speed & distance into drive
-=end
-
      class Car
        attr_reader :color, :model, :speed, :total_distance, :orientation
-       attr_writer :speed, :distance, :orientation
        
-       def initialize(color, model, distance_to_drive)
+       
+       def initialize(color, model)
          @color = color
          @model = model
-         @distance_to_drive = distance_to_drive
+       end
+       
+       def set_orientation(orientation)
+         @orientation = orientation
        end
        
        def turn_right
        	@orientation += 90
-       	@actions << "#{@actions.length + 1}.  Car turns right."
+       	set_orientation(@orientation)         
+        @actions << "#{@actions.length + 1}.  Car turns right."
        end
 
        def turn_left
        	@orientation -= 90
-       	@actions << "#{@actions.length + 1}.  Car turns left."
+       	set_orientation(@orientation)
+        @actions << "#{@actions.length + 1}.  Car turns left."
        end
 
+       def set_speed(speed)
+         @speed = speed
+       end
+       
        def reset_distance
          @total_distance = 0
          @actions = []
        end        
       
        def drive(speed, distance)
-         @speed = speed
+         set_speed(speed)
          @total_distance += distance
          @actions << "#{@actions.length + 1}.  Car has travelled #{distance} miles at #{speed} mph."
        end
        
        def stop
-        @speed = 0
+        set_speed(0)
         @actions << "#{@actions.length + 1}.  Car stops."
       end
 
@@ -233,7 +237,7 @@ replace drive method with total_dist --> no need to combine speed & distance int
   
   my_car.reset_distance 
   
-  my_car.orientation = 0
+  my_car.set_orientation(0)
   my_car.drive(25, 0.25)
   
   p my_car.speed == 25
@@ -286,15 +290,3 @@ replace drive method with total_dist --> no need to combine speed & distance int
 
 
 # 5. Reflection 
-=begin
-I had been reading the first couple of chapters of POODR, and this exercise 
-really helped solidify the concept of making methods do one thing simply.  
-It's tempting to make them more complex--both because even that seems simple 
-but it also seems like it would make me more of a successful programmer.
-
-This exercise also showed the power of adhering to user stories.  The user 
-stories themselves seem to directly imply both the method names as well as 
-the driver tests.  I think a good lesson here is to go back to the user 
-stories continuously during the design/coding process--always check back 
-to see what the goal is, what the client wants.
-=end
